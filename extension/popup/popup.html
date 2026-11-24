@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kimai ↔ Trello</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Timer Kimai</h1>
+        <a href="../options/options.html" id="options-link">Options</a>
+      </header>
+
+      <p id="context-label" class="context"></p>
+
+      <div class="field">
+        <label for="project">Projet</label>
+        <select id="project"></select>
+      </div>
+
+      <div class="field">
+        <label for="activity">Activité</label>
+        <select id="activity"></select>
+      </div>
+
+      <div class="field">
+        <label for="description">Description</label>
+        <textarea id="description" rows="4" placeholder="Titre&#10;https://trello.com/c/…"></textarea>
+      </div>
+
+      <div class="actions">
+        <button type="button" id="start-btn" class="primary">Démarrer</button>
+        <button type="button" id="save-btn" class="ghost" hidden>Enregistrer</button>
+        <button type="button" id="stop-btn" class="danger" hidden>Arrêter</button>
+      </div>
+
+      <div class="actions secondary">
+        <button type="button" id="refresh-btn" class="ghost">Rafraîchir</button>
+      </div>
+
+      <p id="message" class="message" role="status"></p>
+    </main>
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>

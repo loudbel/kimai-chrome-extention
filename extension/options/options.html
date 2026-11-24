@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kimai ↔ Trello — Options</title>
+    <link rel="stylesheet" href="options.css" />
+  </head>
+  <body>
+    <main class="wrap">
+      <h1>Kimai ↔ Trello</h1>
+      <p class="hint">
+        Renseignez l’URL de votre instance Kimai et votre token API (profil
+        utilisateur → API). Préférez le
+        <strong>HTTPS</strong>. USER_NAME est optionnel (fallback legacy
+        <code>X-AUTH-*</code>).
+      </p>
+
+      <form id="options-form">
+        <label>
+          BASE_URL
+          <input
+            id="baseUrl"
+            name="baseUrl"
+            type="url"
+            required
+            placeholder="https://your-kimai.example/api"
+            autocomplete="off"
+          />
+        </label>
+
+        <label>
+          USER_NAME <span class="optional">(optionnel)</span>
+          <input
+            id="userName"
+            name="userName"
+            type="text"
+            placeholder="votre.login"
+            autocomplete="off"
+          />
+        </label>
+
+        <label>
+          API_KEY
+          <input
+            id="apiKey"
+            name="apiKey"
+            type="password"
+            required
+            placeholder="token API Kimai"
+            autocomplete="off"
+          />
+        </label>
+
+        <div class="actions">
+          <button type="submit">Enregistrer</button>
+          <button type="button" id="test-btn" class="secondary">
+            Tester la connexion
+          </button>
+        </div>
+      </form>
+
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+    </main>
+    <script type="module" src="options.js"></script>
+  </body>
+</html>

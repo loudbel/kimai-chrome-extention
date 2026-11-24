@@ -1,0 +1,204 @@
+/* Slot placed just before assigned member avatars */
+.kimai-avatar-slot {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 4px;
+  vertical-align: middle;
+  flex: 0 0 auto;
+}
+
+.kimai-card-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: #1f7a5c;
+  color: #fff;
+  font: 700 11px/1 "Segoe UI", system-ui, sans-serif;
+  text-align: center;
+  cursor: pointer;
+  opacity: 0.95;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.18);
+}
+
+.kimai-card-btn:hover {
+  background: #18634a;
+  opacity: 1;
+}
+
+.kimai-card-btn.is-running {
+  background: #b42318;
+}
+
+.kimai-card-btn.is-running:hover {
+  background: #912018;
+}
+
+/* Modal title button (card open) */
+.kimai-modal-title-host {
+  position: relative;
+  padding-right: 96px !important;
+}
+
+.kimai-card-btn--modal {
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  transform: translateY(-50%);
+  width: auto;
+  height: 28px;
+  padding: 0 10px;
+  border-radius: 8px;
+  font: 600 12px/28px "Segoe UI", system-ui, sans-serif;
+}
+
+/* Panel */
+.kimai-trello-panel-root {
+  position: fixed;
+  inset: 0;
+  z-index: 100000;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 12vh 16px 16px;
+  background: rgba(16, 24, 32, 0.35);
+}
+
+.kimai-trello-panel {
+  width: min(360px, 100%);
+  background: #fff;
+  color: #1a2332;
+  border-radius: 12px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  font: 14px/1.4 "Segoe UI", system-ui, sans-serif;
+}
+
+.kimai-trello-panel h2 {
+  margin: 0 0 4px;
+  font-size: 16px;
+}
+
+.kimai-trello-card-title {
+  margin: 0 0 14px;
+  color: #5b6b7c;
+  font-size: 12px;
+  word-break: break-word;
+}
+
+.kimai-trello-field {
+  display: grid;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.kimai-trello-field label {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.kimai-trello-field select,
+.kimai-trello-field textarea {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #d5dde5;
+  border-radius: 8px;
+  font: inherit;
+  background: #fff;
+}
+
+.kimai-trello-field textarea {
+  min-height: 84px;
+  resize: vertical;
+  line-height: 1.35;
+}
+
+.kimai-trello-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.kimai-trello-actions button {
+  flex: 1 1 auto;
+  min-width: 110px;
+  border: none;
+  border-radius: 8px;
+  padding: 9px 12px;
+  font: 600 13px/1.2 "Segoe UI", system-ui, sans-serif;
+  cursor: pointer;
+}
+
+.kimai-trello-actions .primary {
+  background: #1f7a5c;
+  color: #fff;
+}
+
+.kimai-trello-actions .primary:hover {
+  background: #18634a;
+}
+
+.kimai-trello-actions .danger {
+  background: #b42318;
+  color: #fff;
+}
+
+.kimai-trello-actions .danger:hover {
+  background: #912018;
+}
+
+.kimai-trello-actions .ghost {
+  background: #eef2f6;
+  color: #1a2332;
+}
+
+.kimai-trello-actions .ghost:hover {
+  background: #e2e8ee;
+}
+
+.kimai-trello-actions button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.kimai-trello-status {
+  margin: 10px 0 0;
+  min-height: 1.2em;
+  font-size: 12px;
+  color: #5b6b7c;
+}
+
+.kimai-trello-status.ok {
+  color: #067647;
+}
+
+.kimai-trello-status.err {
+  color: #b42318;
+}
+
+.kimai-trello-toast {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 100001;
+  max-width: min(360px, calc(100vw - 32px));
+  padding: 12px 14px;
+  border-radius: 10px;
+  background: #1a2332;
+  color: #fff;
+  font: 600 13px/1.35 "Segoe UI", system-ui, sans-serif;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.kimai-trello-toast.err {
+  background: #912018;
+}
+
+.kimai-trello-toast.ok {
+  background: #18634a;
+}
